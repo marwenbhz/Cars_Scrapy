@@ -10,5 +10,6 @@ import scrapy
 
 class CarsItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    link_car = scrapy.Field()
+    sub_title = scrapy.Field()
+    location = scrapy.Field()
