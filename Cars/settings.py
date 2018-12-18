@@ -13,7 +13,7 @@ BOT_NAME = 'Cars'
 
 SPIDER_MODULES = ['Cars.spiders']
 NEWSPIDER_MODULE = 'Cars.spiders'
-FEED_URI = '../data_cars/%(name)s%(time)s.csv'
+FEED_URI = '../data_cars/csv/%(name)s%(time)s.csv'
 FEED_FORMAT = 'csv'
 
 
@@ -67,9 +67,11 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'Cars.pipelines.CarsPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'Cars.pipelines.CarsPipeline': 300,
+    'scrapy.pipelines.images.ImagesPipeline': 1
+}
+IMAGES_STORE = '/home/databiz206/Marwen/formation/formation/Cars/Cars//data_cars/images'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

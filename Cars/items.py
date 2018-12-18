@@ -21,3 +21,5 @@ class CarsItem(scrapy.Item):
     annee = scrapy.Field()
     km = scrapy.Field()
     capacite = scrapy.Field()
+    image_urls = scrapy.Field()
+    images = scrapy.Field()
