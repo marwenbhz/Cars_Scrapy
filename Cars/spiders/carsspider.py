@@ -10,10 +10,10 @@ class CarsspiderSpider(scrapy.Spider):
     name = 'carsspider'
     allowed_domains = ['otomoto.pl']
     start_urls = ['https://www.otomoto.pl/osobowe/']
-    custom_settings = {
-    'LOG_FILE': 'logs/cars.log',
-    'LOG_LEVEL':'DEBUG'
-     }
+    #custom_settings = {
+    #'LOG_FILE': 'logs/cars.log',
+    #'LOG_LEVEL':'DEBUG'
+     #}
 
 
     def parse(self, response):
